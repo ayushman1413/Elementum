@@ -1,6 +1,5 @@
 import { useInView } from '../hooks/useInView'
 
-// Photos that float around the testimonial card
 const SCATTERED_PHOTOS = [
   { src: 'https://i.pravatar.cc/200?img=13', size: 70,  style: { top: '10%', left: '2%'  } },
   { src: 'https://i.pravatar.cc/200?img=20', size: 56,  style: { top: '45%', left: '4%'  } },
@@ -15,34 +14,23 @@ export default function Testimonials() {
   const sectionRef = useInView(0.15)
 
   return (
-    <section id="contact" className="py-24 lg:py-32 relative overflow-hidden">
+    <section id="testimonials" className="py-20 lg:py-32 relative overflow-hidden bg-white">
       <div
         ref={sectionRef}
-        className="reveal max-w-7xl mx-auto px-6 lg:px-16"
+        className="reveal max-w-7xl mx-auto px-6 lg:px-8"
       >
-        {/* ── Heading ── */}
         <h2
           className="text-center font-sans mb-16"
           style={{
             fontWeight: 800,
-            fontSize: 'clamp(2rem, 4vw, 3.2rem)',
+            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
             letterSpacing: '-0.02em',
           }}
         >
-          What our customer
-          <br />
-          says{' '}
-          <span
-            style={{
-              borderBottom: '3px solid #F59E0B',
-              paddingBottom: 2,
-            }}
-          >
-            About Us
-          </span>
+          What our customer<br />
+          says About Us
         </h2>
 
-        {/* ── Layout: scattered photos + center card ── */}
         <div className="relative flex items-center justify-center" style={{ minHeight: 360 }}>
 
           {/* Scattered photos – hidden on small screens */}
@@ -55,7 +43,7 @@ export default function Testimonials() {
               <img
                 src={p.src}
                 alt=""
-                className="profile-circle"
+                className="rounded-full object-cover border-4 border-white shadow-md"
                 style={{ width: p.size, height: p.size }}
               />
             </div>
@@ -66,50 +54,35 @@ export default function Testimonials() {
             className="relative z-10 mx-auto"
             style={{
               background: '#f0fdf4',
-              borderRadius: 20,
-              padding: 'clamp(24px, 4vw, 44px)',
+              borderRadius: 24,
+              padding: 'clamp(32px, 5vw, 48px)',
               maxWidth: 540,
               textAlign: 'center',
-              boxShadow: '0 4px 30px rgba(0,0,0,0.06)',
+              boxShadow: '0 8px 40px rgba(0,0,0,0.08)',
             }}
           >
-            {/* Open quote */}
-            <span
-              className="block text-5xl leading-none mb-2"
-              style={{ color: '#6b7280', fontFamily: 'Georgia, serif' }}
-            >
-              &#8220;
-            </span>
-
             <p
-              className="text-gray-700 leading-relaxed"
-              style={{ fontSize: 'clamp(0.85rem, 1.5vw, 1rem)' }}
+              className="text-gray-700 leading-relaxed mb-6"
+              style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.05rem)' }}
             >
-              Elementum delivered the site with inthe timeline as they requested.
-              Inthe end, the client found a 50% increase in traffic with in days
-              since its launch. They also had an impressive ability to use
-              technologies that the company hasnt used, which have also proved to
-              be easy to use and reliable
+              "Elementum transformed our entire digital presence. The team was professional, creative, and delivered results that exceeded our expectations. Within months, we saw significant growth in both engagement and conversions."
             </p>
 
-            {/* Close quote */}
-            <span
-              className="block text-5xl leading-none mt-2"
-              style={{ color: '#6b7280', fontFamily: 'Georgia, serif' }}
-            >
-              &#8221;
-            </span>
+            <div className="flex flex-col items-center">
+              <p className="font-semibold text-gray-900">Sarah Mitchell</p>
+              <p className="text-sm text-gray-600">Founder, Creative Studio</p>
+            </div>
           </div>
         </div>
 
         {/* Mobile: simple photo strip */}
-        <div className="lg:hidden flex flex-wrap justify-center gap-3 mt-8">
+        <div className="lg:hidden flex flex-wrap justify-center gap-4 mt-8">
           {SCATTERED_PHOTOS.slice(0, 5).map((p, i) => (
             <img
               key={i}
               src={p.src}
               alt=""
-              className="profile-circle"
+              className="rounded-full object-cover border-4 border-white shadow-sm"
               style={{ width: 56, height: 56 }}
             />
           ))}
