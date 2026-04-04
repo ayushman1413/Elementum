@@ -1,4 +1,4 @@
-// src/components/Hero.jsx
+import { useInView } from '../hooks/useInView'
 
 const PROFILE_PHOTOS = [
   { id: 1, src: 'https://i.pravatar.cc/200?img=65', size: 88 },
@@ -11,22 +11,15 @@ const PROFILE_PHOTOS = [
   { id: 8, src: 'https://i.pravatar.cc/200?img=44', size: 104 },
 ]
 
-// absolute positions as percentages – desktop layout
 const PHOTO_POSITIONS = [
-  { left: '1%',   bottom: '8%',  delay: 0.2 },  // man w/ hat
-  { left: '7%',   bottom: '26%', delay: 0.3 },  // striped shirt (overlapping 1)
-  { left: '25%',  top:    '4%',  delay: 0.4 },  // large center-left
-  { left: '39%',  top:    '12%', delay: 0.5 },  // man pair left
-  { left: '50%',  top:    '6%',  delay: 0.55 }, // man pair right (overlapping 4)
-  { right: '24%', top:    '4%',  delay: 0.6 },  // solo right
-  { right: '4%',  top:    '2%',  delay: 0.65 }, // large far-right
-  { right: '13%', bottom: '8%',  delay: 0.7 },  // woman colorful (overlapping 7)
-]
-
-// tiny badge overlays that sit on photo #3 (K, Y)
-const PHOTO_BADGES = [
-  { label: 'K', bg: '#06b6d4', top: '60%', left: '60%' },
-  { label: 'Y', bg: '#facc15', top: '74%', left: '78%' },
+  { left: '1%',   bottom: '8%',  delay: 0.2 },
+  { left: '7%',   bottom: '26%', delay: 0.3 },
+  { left: '25%',  top:    '4%',  delay: 0.4 },
+  { left: '39%',  top:    '12%', delay: 0.5 },
+  { left: '50%',  top:    '6%',  delay: 0.55 },
+  { right: '24%', top:    '4%',  delay: 0.6 },
+  { right: '4%',  top:    '2%',  delay: 0.65 },
+  { right: '13%', bottom: '8%',  delay: 0.7 },
 ]
 
 export default function Hero() {
