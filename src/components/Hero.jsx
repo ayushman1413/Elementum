@@ -28,9 +28,56 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden pt-32 pb-16 min-h-screen flex flex-col justify-center"
+      className="relative overflow-hidden pt-24 pb-0 min-h-screen flex flex-col"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full" ref={ref}>
+      {/* Decorative: left squiggle */}
+      <svg
+        className="absolute left-0 top-40 hidden lg:block pointer-events-none"
+        width="60"
+        height="260"
+        viewBox="0 0 60 260"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{ animation: 'fadeIn 1.2s ease 0.5s both' }}
+      >
+        <path
+          d="M30 10 C10 40, 50 70, 30 100 C10 130, 50 160, 30 190 C10 220, 50 240, 30 260"
+          stroke="#ef4444"
+          strokeWidth="2.5"
+          fill="none"
+          strokeLinecap="round"
+        />
+      </svg>
+
+      {/* Decorative: pink oval */}
+      <div
+        className="absolute hidden lg:block pointer-events-none"
+        style={{
+          left: '10%',
+          top: '28%',
+          width: 100,
+          height: 170,
+          border: '2px solid #f9a8d4',
+          borderRadius: '50%',
+          transform: 'rotate(-20deg)',
+          animation: 'fadeIn 1s ease 0.8s both',
+        }}
+      />
+
+      {/* Decorative: purple shape */}
+      <div
+        className="absolute right-10 top-40 hidden lg:block pointer-events-none"
+        style={{ animation: 'fadeIn 1s ease 0.6s both' }}
+      >
+        <svg width="60" height="90" viewBox="0 0 60 90" fill="none">
+          <path
+            d="M55 5 C55 5 55 60 30 85 C10 65 5 40 5 20 C5 10 15 2 30 2 C45 2 55 5 55 5Z"
+            fill="#a855f7"
+          />
+        </svg>
+      </div>
+
+      <div ref={ref} className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
         {/* Main heading */}
         <h1
           className="text-center font-sans leading-tight px-4 mx-auto mb-6"
@@ -42,7 +89,13 @@ export default function Hero() {
             animation: 'fadeUp 0.7s ease 0.1s both',
           }}
         >
-          The thinkers and doers were changing the status Quo with
+          The{' '}
+          <span style={{ borderBottom: '2px solid #111' }}>thinkers</span> and
+          <br />
+          doers were{' '}
+          <span style={{ background: '#fce7f3', padding: '0 10px', borderRadius: '8px' }}>changing</span>
+          <br />
+          the status Quo with
         </h1>
 
         {/* Subtitle */}
@@ -53,7 +106,7 @@ export default function Hero() {
             animation: 'fadeUp 0.7s ease 0.2s both',
           }}
         >
-          We are a team of strategists, designers, and communicators working together to create meaningful experiences that push boundaries.
+          We are a team of strategists, designers communicators, researchers. Together, we believe that progress only happens when you refuse to play things safe.
         </p>
 
         {/* Scattered Profile Photos (desktop) */}

@@ -2,16 +2,16 @@ import { useInView } from '../hooks/useInView'
 
 const SERVICES = [
   {
-    meta: 'Brand Strategy',
-    title: 'Brand Development',
+    meta:  'Office of multiple interest content',
+    title: 'Colaborative & partnership',
   },
   {
-    meta: 'Design & Creative',
-    title: 'Digital Design',
+    meta:  'The hanger US Air force digital experimental',
+    title: 'We talk about our weight',
   },
   {
-    meta: 'Development',
-    title: 'Web Applications',
+    meta:  'Delta faucet content, social, digital',
+    title: 'Piloting digital confidence',
   },
 ]
 
@@ -21,18 +21,53 @@ export default function Services() {
 
   return (
     <section className="py-20 lg:py-32 relative overflow-hidden bg-white">
+      {/* Red decorative squiggle */}
+      <svg
+        className="absolute right-0 top-0 pointer-events-none hidden lg:block"
+        width="200"
+        height="260"
+        viewBox="0 0 200 260"
+        fill="none"
+        style={{ zIndex: 0 }}
+      >
+        <path
+          d="M200 0 C140 40, 80 60, 100 130 C120 200, 60 220, 80 260"
+          stroke="#ef4444"
+          strokeWidth="2"
+          fill="none"
+          strokeLinecap="round"
+          opacity="0.5"
+        />
+      </svg>
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
 
-        <div ref={headRef} className="reveal mb-16">
+        <div ref={headRef} className="reveal mb-14">
           <h2
             className="font-sans leading-tight"
             style={{
               fontWeight: 800,
-              fontSize: 'clamp(2rem, 6vw, 4rem)',
-              letterSpacing: '-0.02em',
+              fontSize: 'clamp(2.4rem, 5vw, 4rem)',
+              letterSpacing: '-0.03em',
             }}
           >
-            What we can offer you!
+            What we{' '}
+            <span
+              className="inline-block px-3 rounded-xl"
+              style={{ background: '#d1fae5' }}
+            >
+              can
+            </span>
+            <br />
+            <span
+              style={{
+                borderBottom: '3px solid #F59E0B',
+                paddingBottom: 2,
+              }}
+            >
+              offer
+            </span>{' '}
+            you!
           </h2>
         </div>
 
@@ -40,26 +75,26 @@ export default function Services() {
           {SERVICES.map((svc, i) => (
             <div
               key={i}
-              className="border-b border-gray-200 py-8 hover:bg-gray-50 px-4 -mx-4 transition-colors cursor-pointer group"
+              className="service-row"
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
-              <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">
+              <p className="service-meta text-xs text-gray-400 leading-relaxed" style={{ maxWidth: 200 }}>
                 {svc.meta}
               </p>
 
-              <div className="flex items-center justify-between gap-4">
-                <h3
-                  className="font-sans font-bold"
-                  style={{
-                    fontSize: 'clamp(1.3rem, 2.5vw, 1.8rem)',
-                    letterSpacing: '-0.01em',
-                  }}
-                >
-                  {svc.title}
-                </h3>
+              <h3
+                className="service-title font-sans font-bold"
+                style={{
+                  fontSize: 'clamp(1.3rem, 2.5vw, 2rem)',
+                  letterSpacing: '-0.02em',
+                }}
+              >
+                {svc.title}
+              </h3>
 
-                <span className="text-2xl text-gray-300 group-hover:text-gray-600 transition-colors flex-shrink-0">→</span>
-              </div>
+              <span className="service-arrow text-xl font-light text-gray-700">
+                &#8594;
+              </span>
             </div>
           ))}
         </div>

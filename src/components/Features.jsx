@@ -10,36 +10,26 @@ export default function Features() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           <div ref={leftRef} className="reveal-left relative flex justify-center lg:justify-start">
-            {/* Red accent triangle - top left */}
-            <div
+            {/* Top-left small red triangle */}
+            <svg
               className="absolute"
-              style={{
-                top: '-24px',
-                left: '-24px',
-                width: 80,
-                height: 80,
-                background: '#ef4444',
-                clipPath: 'polygon(50% 0%, 100% 100%, 0% 100%)',
-                zIndex: 2,
-              }}
-            />
+              style={{ top: '-10px', left: '-10px', zIndex: 2 }}
+              width="60" height="60" viewBox="0 0 60 60"
+            >
+              <polygon points="30,0 60,60 0,60" fill="#ef4444" />
+            </svg>
 
-            {/* Red accent triangle - bottom */}
-            <div
+            {/* Bottom-center large red triangle */}
+            <svg
               className="absolute"
-              style={{
-                bottom: '-32px',
-                left: '25%',
-                width: 120,
-                height: 120,
-                background: '#ef4444',
-                clipPath: 'polygon(50% 0%, 100% 100%, 0% 100%)',
-                zIndex: 2,
-              }}
-            />
+              style={{ bottom: '-20px', left: '30%', zIndex: 2 }}
+              width="110" height="110" viewBox="0 0 110 110"
+            >
+              <polygon points="55,0 110,110 0,110" fill="#ef4444" />
+            </svg>
 
             <div
-              className="relative rounded-2xl overflow-hidden z-10"
+              className="relative rounded-full overflow-hidden z-10"
               style={{
                 width: 'clamp(280px, 100%, 420px)',
                 height: 'clamp(280px, 100%, 420px)',
@@ -48,7 +38,7 @@ export default function Features() {
             >
               <img
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=600&fit=crop"
-                alt="Team working together"
+                alt="Team collaboration"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -63,15 +53,25 @@ export default function Features() {
                 letterSpacing: '-0.02em',
               }}
             >
-              See how we can help you progress
+              See how we can
+              <br />
+              help you{' '}
+              <span
+                style={{
+                  borderBottom: '3px solid #F59E0B',
+                  paddingBottom: 2,
+                }}
+              >
+                progress
+              </span>
             </h2>
 
             <p className="text-gray-600 text-base leading-relaxed mb-8 max-w-lg">
-              We combine strategic thinking with creative execution to deliver solutions that drive real results. Whether it's brand transformation, digital design, or full-scale development, we're equipped to help you succeed.
+              We add a layer of fearless insights and action that allows change makers to accelerate their progress in areas such as brand, design digital, comms and social research.
             </p>
 
             <a href="#contact" className="inline-block font-medium text-gray-900 hover:text-gray-600 transition-colors">
-              Let's work together →
+              Read more →
             </a>
           </div>
         </div>

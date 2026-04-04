@@ -6,6 +6,39 @@ export default function About() {
 
   return (
     <section id="studio" className="relative overflow-hidden py-20 lg:py-32 bg-white">
+      {/* Pink gradient blob */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          right: '30%',
+          top: '10%',
+          width: 360,
+          height: 360,
+          background: 'radial-gradient(circle, rgba(252,231,243,0.7) 0%, transparent 70%)',
+          borderRadius: '50%',
+          zIndex: 0,
+        }}
+      />
+
+      {/* Red decorative curved line */}
+      <svg
+        className="absolute right-0 top-1/2 pointer-events-none hidden lg:block"
+        width="260"
+        height="400"
+        viewBox="0 0 260 400"
+        fill="none"
+        style={{ zIndex: 0 }}
+      >
+        <path
+          d="M260 20 C200 80, 80 100, 60 180 C40 260, 180 300, 140 380"
+          stroke="#ef4444"
+          strokeWidth="2"
+          fill="none"
+          strokeLinecap="round"
+          opacity="0.6"
+        />
+      </svg>
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -18,11 +51,24 @@ export default function About() {
                 letterSpacing: '-0.02em',
               }}
             >
-              Tomorrow should be better than today
+              <span
+                style={{
+                  borderBottom: '3px solid #F59E0B',
+                  paddingBottom: 2,
+                }}
+              >
+                Tomorrow
+              </span>{' '}
+              should
+              <br />
+              be better than{' '}
+              <span className="highlight-green" style={{ padding: '0 6px' }}>
+                today
+              </span>
             </h2>
 
             <p className="text-gray-600 text-base leading-relaxed mb-8 max-w-lg">
-              We believe that progress happens when you refuse to play it safe. Our team combines strategic thinking with creative execution to deliver solutions that truly matter to our clients and their audiences.
+              We are a team of strategists, designers communicators, researchers. Together, we belive that progress only happens when you refuse to play things safe.
             </p>
 
             <a href="#services" className="inline-block font-medium text-gray-900 hover:text-gray-600 transition-colors">
@@ -31,26 +77,26 @@ export default function About() {
           </div>
 
           <div ref={rightRef} className="reveal-right relative flex justify-center lg:justify-end">
-            {/* Red accent shape */}
+            {/* Red accent square */}
             <div
               className="absolute"
               style={{
-                top: '-16px',
-                right: '-16px',
-                width: 100,
-                height: 100,
+                top: '-20px',
+                right: '0px',
+                width: 90,
+                height: 90,
                 background: '#ef4444',
-                borderRadius: 12,
+                borderRadius: 6,
                 zIndex: 0,
               }}
             />
 
             <div
-              className="relative z-10 rounded-2xl overflow-hidden"
+              className="relative z-10 rounded-full overflow-hidden"
               style={{
-                width: 'clamp(280px, 100%, 420px)',
-                height: 'clamp(280px, 100%, 420px)',
-                boxShadow: '0 20px 60px rgba(0,0,0,0.1)',
+                width: 'clamp(260px, 35vw, 400px)',
+                height: 'clamp(260px, 35vw, 400px)',
+                boxShadow: '0 20px 60px rgba(0,0,0,0.12)',
               }}
             >
               <img
