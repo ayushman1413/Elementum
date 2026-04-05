@@ -246,6 +246,26 @@ body {
 .badge-o { background: #fbbf24; }
 .badge-y { background: #1a1a1a; }
 
+/* ── Highlighted text ── */
+.highlighted {
+  position: relative;
+  display: inline-block;
+  color: #111;
+}
+
+.highlighted::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #111;
+  border-radius: 2px;
+  transform-origin: left;
+  animation: slideIn 0.8s ease 0.9s both;
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .service-row {
