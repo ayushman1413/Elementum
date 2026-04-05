@@ -5,7 +5,7 @@ export default function About() {
   const rightRef = useInView(0.2)
 
   return (
-    <section id="studio" className="relative overflow-hidden py-20 lg:py-32 bg-white">
+    <section id="studio" className="relative overflow-hidden py-12 lg:py-24 bg-white">
       <div
         className="absolute pointer-events-none"
         style={{

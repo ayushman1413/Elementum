@@ -7,8 +7,32 @@ export default function Newsletter() {
     <section
       id="contact"
       style={{ background: '#e4f4e1' }}
-      className="relative overflow-hidden py-20 lg:py-32"
+      className="relative overflow-hidden py-12 lg:py-24"
     >
+      <svg
+        className="absolute bottom-0 left-32 hidden lg:block pointer-events-none"
+        width="280"
+        height="200"
+        viewBox="0 0 280 200"
+        fill="none"
+      >
+        <path
+          d="M0 80 Q70 30, 140 90 Q210 150, 280 100"
+          stroke="#ff6b6b"
+          strokeWidth="2.5"
+          fill="none"
+          strokeLinecap="round"
+          opacity="0.25"
+        />
+        <path
+          d="M20 150 Q100 120, 180 160 Q240 190, 280 200"
+          stroke="#a855f7"
+          strokeWidth="1.5"
+          fill="none"
+          strokeLinecap="round"
+          opacity="0.2"
+        />
+      </svg>
       <svg
         className="absolute left-0 top-0 pointer-events-none hidden lg:block"
         width="240"
@@ -78,12 +102,12 @@ export default function Newsletter() {
           <input
             type="email"
             placeholder="Enter your email"
-            className="flex-1 px-4 py-3 rounded-lg border-none focus:outline-none"
+            className="flex-1 px-6 py-3 rounded-full border-none focus:outline-none bg-white shadow-sm hover:shadow-md transition-shadow"
             required
           />
           <button
             type="submit"
-            className="px-6 py-3 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors whitespace-nowrap"
+            className="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition-all duration-300 hover:shadow-lg hover:scale-105 whitespace-nowrap"
           >
             Subscribe Now
           </button>

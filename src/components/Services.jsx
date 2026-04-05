@@ -20,7 +20,7 @@ export default function Services() {
   const listRef = useInView(0.15)
 
   return (
-    <section id="services" className="py-20 lg:py-32 relative overflow-hidden bg-white">
+    <section id="services" className="py-12 lg:py-24 relative overflow-hidden bg-white">
       <svg
         className="absolute right-0 top-0 pointer-events-none hidden lg:block"
         width="200"

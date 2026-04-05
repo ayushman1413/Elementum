@@ -312,6 +312,10 @@ body {
   font-size: clamp(60px, 10vw, 100px);
   opacity: 0.15;
   color: #111;
+  line-height: 1;
+  font-family: Georgia, serif;
+  font-weight: 700;
+}
 
 .glass-effect {
   background: rgba(255, 255, 255, 0.85);
@@ -346,10 +350,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-  line-height: 1;
-  font-family: Georgia, serif;
-  font-weight: 700;
 }
 
 .testimonials-text {

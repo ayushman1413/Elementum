@@ -5,40 +5,73 @@ export default function Features() {
   const rightRef = useInView(0.2)
 
   return (
-    <section className="relative overflow-hidden py-20 lg:py-32 bg-white">
+    <section className="relative overflow-hidden py-12 lg:py-24 bg-white">
+      <svg
+        className="absolute bottom-0 right-10 hidden lg:block pointer-events-none"
+        width="200"
+        height="250"
+        viewBox="0 0 200 250"
+        fill="none"
+        style={{ zIndex: 0 }}
+      >
+        <path
+          d="M0 100 Q50 40, 100 80 Q150 120, 200 60"
+          stroke="#ff6b6b"
+          strokeWidth="2"
+          fill="none"
+          strokeLinecap="round"
+          opacity="0.35"
+        />
+        <path
+          d="M20 200 Q80 160, 140 190 Q180 210, 200 250"
+          stroke="#a855f7"
+          strokeWidth="1.5"
+          fill="none"
+          strokeLinecap="round"
+          opacity="0.25"
+        />
+      </svg>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           <div ref={leftRef} className="reveal-left relative flex justify-center lg:justify-start">
-            <svg
-              className="absolute"
-              style={{ top: '-10px', left: '-10px', zIndex: 2 }}
-              width="60" height="60" viewBox="0 0 60 60"
-            >
-              <polygon points="30,0 60,60 0,60" fill="#ef4444" />
-            </svg>
-
-            <svg
-              className="absolute"
-              style={{ bottom: '-20px', left: '30%', zIndex: 2 }}
-              width="110" height="110" viewBox="0 0 110 110"
-            >
-              <polygon points="55,0 110,110 0,110" fill="#ef4444" />
-            </svg>
-
             <div
-              className="relative rounded-full overflow-hidden z-10"
+              className="relative rounded-full overflow-visible z-10"
               style={{
                 width: 'clamp(280px, 100%, 420px)',
                 height: 'clamp(280px, 100%, 420px)',
                 boxShadow: '0 20px 60px rgba(0,0,0,0.1)',
               }}
             >
-              <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=600&fit=crop"
-                alt="Team collaboration"
-                className="w-full h-full object-cover"
-              />
+              <svg
+                className="absolute"
+                style={{ top: '20px', left: '20px', zIndex: 3, pointerEvents: 'none' }}
+                width="80" height="80" viewBox="0 0 80 80"
+              >
+                <polygon points="40,0 80,80 0,80" fill="#ef4444" />
+              </svg>
+
+              <svg
+                className="absolute"
+                style={{ bottom: '30px', right: '40px', zIndex: 20, pointerEvents: 'none' }}
+                width="120" height="120" viewBox="0 0 120 120"
+              >
+                <polygon points="60,0 120,120 0,120" fill="#ef4444" />
+              </svg>
+
+              <div
+                className="relative rounded-full overflow-hidden"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                }}
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=600&fit=crop"
+                  alt="Team collaboration"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
 

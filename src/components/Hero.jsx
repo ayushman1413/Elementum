@@ -48,6 +48,24 @@ export default function Hero() {
         />
       </svg>
 
+      <svg
+        className="absolute right-20 top-20 hidden lg:block pointer-events-none"
+        width="120"
+        height="300"
+        viewBox="0 0 120 300"
+        fill="none"
+        style={{ animation: 'fadeIn 1.5s ease 0.7s both' }}
+      >
+        <path
+          d="M10 50 Q50 30, 90 80 Q110 110, 80 200 Q60 270, 20 300"
+          stroke="#a855f7"
+          strokeWidth="2"
+          fill="none"
+          strokeLinecap="round"
+          opacity="0.3"
+        />
+      </svg>
+
       {/* Decorative: pink oval */}
       <div
         className="absolute hidden lg:block pointer-events-none"

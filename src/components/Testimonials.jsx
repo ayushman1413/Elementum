@@ -14,7 +14,24 @@ export default function Testimonials() {
   const sectionRef = useInView(0.15)
 
   return (
-    <section id="testimonials" className="py-20 lg:py-32 relative overflow-hidden bg-white">
+    <section id="testimonials" className="py-12 lg:py-24 relative overflow-hidden bg-white">
+      <svg
+        className="absolute top-10 left-20 hidden lg:block pointer-events-none"
+        width="250"
+        height="200"
+        viewBox="0 0 250 200"
+        fill="none"
+        style={{ zIndex: 0 }}
+      >
+        <path
+          d="M0 50 Q60 20, 120 60 Q180 100, 250 40"
+          stroke="#ff6b6b"
+          strokeWidth="2"
+          fill="none"
+          strokeLinecap="round"
+          opacity="0.3"
+        />
+      </svg>
       <div
         ref={sectionRef}
         className="reveal max-w-7xl mx-auto px-6 lg:px-8"
