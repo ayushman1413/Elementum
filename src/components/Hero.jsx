@@ -77,25 +77,7 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div ref={ref} className="max-w-7xl mx-auto px-6 lg:px-8 w-full">        {/* Badges */}
-        <div
-          className="flex justify-center gap-2 mb-8"
-          style={{ animation: 'fadeUp 0.6s ease 0.1s both' }}
-        >
-          {[
-            { label: 'V', bg: '#fff', text: '#111' },
-            { label: 'O', bg: '#fbbf24', text: '#111' },
-            { label: 'Y', bg: '#1a1a1a', text: '#fff' },
-          ].map(({ label, bg, text }) => (
-            <span
-              key={label}
-              className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm border border-gray-200"
-              style={{ background: bg, color: text }}
-            >
-              {label}
-            </span>
-          ))}
-        </div>
+      <div ref={ref} className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
         {/* Main heading */}
         <h1
           className="text-center font-sans leading-tight px-4 mx-auto mb-6"
