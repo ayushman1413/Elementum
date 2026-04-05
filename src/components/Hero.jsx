@@ -144,6 +144,10 @@ export default function Hero() {
           ))}
         </div>
       </div>
+
+      <svg className="section-curve" viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,60 Q360,0 720,60 T1440,60" />
+      </svg>
     </section>
   )
 }

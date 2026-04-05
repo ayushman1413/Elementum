@@ -4,14 +4,17 @@ const SERVICES = [
   {
     meta:  'Office of multiple interest content',
     title: 'Colaborative & partnership',
+    icon: '🤝',
   },
   {
     meta:  'The hanger US Air force digital experimental',
     title: 'We talk about our weight',
+    icon: '🚀',
   },
   {
     meta:  'Delta faucet content, social, digital',
     title: 'Piloting digital confidence',
+    icon: '✈️',
   },
 ]
 
@@ -74,9 +77,10 @@ export default function Services() {
           {SERVICES.map((svc, i) => (
             <div
               key={i}
-              className="service-row"
+              className="service-row-enhanced"
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
+              <span className="service-icon">{svc.icon}</span>
               <p className="service-meta text-xs text-gray-400 leading-relaxed" style={{ maxWidth: 200 }}>
                 {svc.meta}
               </p>
