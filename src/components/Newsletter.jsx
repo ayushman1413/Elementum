@@ -33,46 +33,6 @@ export default function Newsletter() {
           opacity="0.2"
         />
       </svg>
-      <svg
-        className="absolute left-0 top-0 pointer-events-none hidden lg:block"
-        width="240"
-        height="200"
-        viewBox="0 0 240 200"
-        fill="none"
-      >
-        <path
-          d="M20 40 Q60 50 100 80"
-          stroke="#ef4444"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          fill="none"
-        />
-        <path
-          d="M100 80 L90 70 M100 80 L95 92"
-          stroke="#ef4444"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          fill="none"
-        />
-        
-        <path
-          d="M30 120 Q80 110 130 140"
-          stroke="#ef4444"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          fill="none"
-          opacity="0.7"
-        />
-        <path
-          d="M130 140 L118 138 M130 140 L128 152"
-          stroke="#ef4444"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          fill="none"
-          opacity="0.7"
-        />
-      </svg>
-
       <div className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none hidden lg:block">
         <svg width="80" height="120" viewBox="0 0 80 120" fill="none">
           <path
@@ -102,12 +62,12 @@ export default function Newsletter() {
           <input
             type="email"
             placeholder="Enter your email"
-            className="flex-1 px-6 py-3 rounded-full border-none focus:outline-none bg-white shadow-sm hover:shadow-md transition-shadow"
+            className="flex-1 px-6 py-3 rounded-full border border-gray-200 focus:outline-none bg-white shadow-md hover:shadow-lg transition-all duration-300 focus:border-red-400 focus:shadow-lg focus:shadow-red-200"
             required
           />
           <button
             type="submit"
-            className="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition-all duration-300 hover:shadow-lg hover:scale-105 whitespace-nowrap"
+            className="px-8 py-3 bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-full font-semibold hover:from-gray-800 hover:to-gray-700 transition-all duration-300 hover:shadow-lg hover:shadow-red-400/30 hover:scale-105 whitespace-nowrap"
           >
             Subscribe Now
           </button>

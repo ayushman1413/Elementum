@@ -77,7 +77,7 @@ export default function Services() {
               className="service-row"
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
-              <p className="service-meta text-xs text-gray-400 leading-relaxed" style={{ maxWidth: 200 }}>
+              <p className="service-meta text-xs text-gray-500 leading-relaxed font-medium" style={{ maxWidth: 200 }}>
                 {svc.meta}
               </p>
 

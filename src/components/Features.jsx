@@ -60,16 +60,17 @@ export default function Features() {
               </svg>
 
               <div
-                className="relative rounded-full overflow-hidden"
+                className="relative rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-red-400/40"
                 style={{
                   width: '100%',
                   height: '100%',
+                  zIndex: 10,
                 }}
               >
                 <img
                   src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=600&fit=crop"
                   alt="Team collaboration"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
             </div>

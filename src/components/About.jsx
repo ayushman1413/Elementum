@@ -69,7 +69,7 @@ export default function About() {
               We are a team of strategists, designers communicators, researchers. Together, we belive that progress only happens when you refuse to play things safe.
             </p>
 
-            <a href="#services" className="inline-block font-medium text-gray-900 hover:text-gray-600 transition-colors">
+            <a href="#services" className="inline-block font-medium text-gray-900 hover:text-red-500 transition-all duration-300 hover:translate-x-1">
               Read more →
             </a>
           </div>
@@ -89,7 +89,7 @@ export default function About() {
             />
 
             <div
-              className="relative z-10 rounded-full overflow-hidden"
+              className="relative z-10 rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl"
               style={{
                 width: 'clamp(260px, 35vw, 400px)',
                 height: 'clamp(260px, 35vw, 400px)',
@@ -99,7 +99,7 @@ export default function About() {
               <img
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=600&fit=crop"
                 alt="Team collaboration"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
               />
             </div>
           </div>
