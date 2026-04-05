@@ -10,7 +10,6 @@ export default function Features() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           <div ref={leftRef} className="reveal-left relative flex justify-center lg:justify-start">
-            {/* Top-left small red triangle */}
             <svg
               className="absolute"
               style={{ top: '-10px', left: '-10px', zIndex: 2 }}
@@ -19,7 +18,6 @@ export default function Features() {
               <polygon points="30,0 60,60 0,60" fill="#ef4444" />
             </svg>
 
-            {/* Bottom-center large red triangle */}
             <svg
               className="absolute"
               style={{ bottom: '-20px', left: '30%', zIndex: 2 }}

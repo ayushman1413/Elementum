@@ -20,7 +20,6 @@ export default function Navbar() {
       style={{ animation: 'fadeIn 0.6s ease both' }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between h-16">
-        {/* Logo */}
         <a
           href="#"
           className="text-lg font-semibold tracking-tight text-black"
@@ -29,7 +28,6 @@ export default function Navbar() {
           Elementum
         </a>
 
-        {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-10">
           {NAV_LINKS.map((link) => (
             <a
@@ -42,7 +40,6 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Hamburger */}
         <button
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Toggle menu"
@@ -69,7 +66,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <div
         className={`md:hidden bg-white border-t border-gray-100 overflow-hidden transition-all duration-300 ${
           menuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'

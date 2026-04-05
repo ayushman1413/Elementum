@@ -30,7 +30,6 @@ export default function Hero() {
       id="home"
       className="relative overflow-hidden pt-24 pb-0 min-h-screen flex flex-col"
     >
-      {/* Decorative: left squiggle */}
       <svg
         className="absolute left-0 top-40 hidden lg:block pointer-events-none"
         width="60"
@@ -64,7 +63,6 @@ export default function Hero() {
         }}
       />
 
-      {/* Decorative: purple shape */}
       <div
         className="absolute right-10 top-40 hidden lg:block pointer-events-none"
         style={{ animation: 'fadeIn 1s ease 0.6s both' }}
@@ -78,7 +76,6 @@ export default function Hero() {
       </div>
 
       <div ref={ref} className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
-        {/* Main heading */}
         <h1
           className="text-center font-sans leading-tight px-4 mx-auto mb-6"
           style={{
@@ -98,7 +95,6 @@ export default function Hero() {
           the status Quo with
         </h1>
 
-        {/* Subtitle */}
         <p
           className="text-center text-gray-600 mx-auto text-base leading-relaxed mb-12"
           style={{
@@ -109,7 +105,6 @@ export default function Hero() {
           We are a team of strategists, designers communicators, researchers. Together, we believe that progress only happens when you refuse to play things safe.
         </p>
 
-        {/* Scattered Profile Photos (desktop) */}
         <div
           className="relative w-full hidden lg:block"
           style={{ height: 320, animation: 'fadeUp 0.8s ease 0.3s both' }}
@@ -137,7 +132,6 @@ export default function Hero() {
           })}
         </div>
 
-        {/* Mobile: simple photo row */}
         <div className="lg:hidden flex flex-wrap justify-center gap-4 mt-8 pb-8">
           {PROFILE_PHOTOS.slice(0, 5).map((photo) => (
             <img

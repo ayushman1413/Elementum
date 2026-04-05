@@ -21,7 +21,6 @@ export default function Services() {
 
   return (
     <section className="py-20 lg:py-32 relative overflow-hidden bg-white">
-      {/* Red decorative squiggle */}
       <svg
         className="absolute right-0 top-0 pointer-events-none hidden lg:block"
         width="200"

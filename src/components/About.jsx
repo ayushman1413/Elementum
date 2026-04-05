@@ -6,7 +6,6 @@ export default function About() {
 
   return (
     <section id="studio" className="relative overflow-hidden py-20 lg:py-32 bg-white">
-      {/* Pink gradient blob */}
       <div
         className="absolute pointer-events-none"
         style={{
@@ -20,7 +19,6 @@ export default function About() {
         }}
       />
 
-      {/* Red decorative curved line */}
       <svg
         className="absolute right-0 top-1/2 pointer-events-none hidden lg:block"
         width="260"
@@ -77,7 +75,6 @@ export default function About() {
           </div>
 
           <div ref={rightRef} className="reveal-right relative flex justify-center lg:justify-end">
-            {/* Red accent square */}
             <div
               className="absolute"
               style={{

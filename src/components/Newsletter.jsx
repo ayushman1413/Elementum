@@ -8,7 +8,6 @@ export default function Newsletter() {
       style={{ background: '#e4f4e1' }}
       className="relative overflow-hidden py-20 lg:py-32"
     >
-      {/* Red arrow decorations */}
       <svg
         className="absolute left-0 top-0 pointer-events-none hidden lg:block"
         width="240"
@@ -16,7 +15,6 @@ export default function Newsletter() {
         viewBox="0 0 240 200"
         fill="none"
       >
-        {/* Arrow 1 */}
         <path
           d="M20 40 Q60 50 100 80"
           stroke="#ef4444"
@@ -32,7 +30,6 @@ export default function Newsletter() {
           fill="none"
         />
         
-        {/* Arrow 2 */}
         <path
           d="M30 120 Q80 110 130 140"
           stroke="#ef4444"
@@ -51,7 +48,6 @@ export default function Newsletter() {
         />
       </svg>
 
-      {/* Purple teardrop accent */}
       <div className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none hidden lg:block">
         <svg width="80" height="120" viewBox="0 0 80 120" fill="none">
           <path

@@ -19,21 +19,12 @@ export default function Testimonials() {
         ref={sectionRef}
         className="reveal max-w-7xl mx-auto px-6 lg:px-8"
       >
-        <h2
-          className="text-center font-sans mb-16"
-          style={{
-            fontWeight: 800,
-            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-            letterSpacing: '-0.02em',
-          }}
-        >
-          What our customer<br />
-          says About Us
+        <h2 className="testimonials-heading text-center font-sans mb-16">
+          <span className="testimonials-highlight">What</span> our customer<br />
+          says <span className="testimonials-underline">About</span> Us
         </h2>
 
-        <div className="relative flex items-center justify-center" style={{ minHeight: 360 }}>
-
-          {/* Scattered photos – hidden on small screens */}
+        <div className="testimonials-container relative flex items-center justify-center">
           {SCATTERED_PHOTOS.map((p, i) => (
             <div
               key={i}
@@ -49,33 +40,25 @@ export default function Testimonials() {
             </div>
           ))}
 
-          {/* Testimonial card */}
-          <div
-            className="relative z-10 mx-auto"
-            style={{
-              background: '#f0fdf4',
-              borderRadius: 24,
-              padding: 'clamp(32px, 5vw, 48px)',
-              maxWidth: 540,
-              textAlign: 'center',
-              boxShadow: '0 8px 40px rgba(0,0,0,0.08)',
-            }}
-          >
-            <p
-              className="text-gray-700 leading-relaxed mb-6"
-              style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.05rem)' }}
-            >
-              "Elementum transformed our entire digital presence. The team was professional, creative, and delivered results that exceeded our expectations. Within months, we saw significant growth in both engagement and conversions."
+          <div className="testimonials-card relative z-10 mx-auto">
+            <div className="testimonials-quote-open">
+              "
+            </div>
+            <div className="testimonials-quote-close">
+              "
+            </div>
+
+            <p className="testimonials-text">
+              Elementum transformed our entire digital presence. The team was professional, creative, and delivered results that exceeded our expectations. Within months, we saw significant growth in both engagement and conversions.
             </p>
 
-            <div className="flex flex-col items-center">
+            <div className="mt-8 flex flex-col items-center">
               <p className="font-semibold text-gray-900">Sarah Mitchell</p>
               <p className="text-sm text-gray-600">Founder, Creative Studio</p>
             </div>
           </div>
         </div>
 
-        {/* Mobile: simple photo strip */}
         <div className="lg:hidden flex flex-wrap justify-center gap-4 mt-8">
           {SCATTERED_PHOTOS.slice(0, 5).map((p, i) => (
             <img
