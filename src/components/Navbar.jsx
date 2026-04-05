@@ -21,8 +21,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-16 flex items-center justify-between h-16">
         <a
-          href="#"
-          className="text-lg font-semibold tracking-tight text-black"
+          href="#home"
+          className="text-lg font-semibold tracking-tight text-black hover:text-gray-700 transition-colors"
           style={{ letterSpacing: '-0.02em' }}
         >
           Elementum
@@ -33,7 +33,8 @@ export default function Navbar() {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="nav-link"
+              className="nav-link hover:text-gray-700 transition-colors"
+              onClick={() => setMenuOpen(false)}
             >
               {link}
             </a>

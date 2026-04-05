@@ -4,17 +4,14 @@ const SERVICES = [
   {
     meta:  'Office of multiple interest content',
     title: 'Colaborative & partnership',
-    icon: '🤝',
   },
   {
     meta:  'The hanger US Air force digital experimental',
     title: 'We talk about our weight',
-    icon: '🚀',
   },
   {
     meta:  'Delta faucet content, social, digital',
     title: 'Piloting digital confidence',
-    icon: '✈️',
   },
 ]
 
@@ -23,7 +20,7 @@ export default function Services() {
   const listRef = useInView(0.15)
 
   return (
-    <section className="py-20 lg:py-32 relative overflow-hidden bg-white">
+    <section id="services" className="py-20 lg:py-32 relative overflow-hidden bg-white">
       <svg
         className="absolute right-0 top-0 pointer-events-none hidden lg:block"
         width="200"
@@ -77,10 +74,9 @@ export default function Services() {
           {SERVICES.map((svc, i) => (
             <div
               key={i}
-              className="service-row-enhanced"
+              className="service-row"
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
-              <span className="service-icon">{svc.icon}</span>
               <p className="service-meta text-xs text-gray-400 leading-relaxed" style={{ maxWidth: 200 }}>
                 {svc.meta}
               </p>

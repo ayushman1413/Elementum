@@ -5,6 +5,7 @@ export default function Newsletter() {
 
   return (
     <section
+      id="contact"
       style={{ background: '#e4f4e1' }}
       className="relative overflow-hidden py-20 lg:py-32"
     >
